@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Amaan's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            background-color: #007f5f;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d4e157;
+            font-size: 1.04rem;
+        }
+
+        main {
+            padding: 60px 20px;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 50px 0;
+        }
+
+        .firstsection>div {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .firstsection>div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .leftsection {
+            order: 2;
+        }
+
+        .rightsection {
+            order: 1;
+        }
+
+        .rightsection img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .leftsection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .leftsection p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #04AA6D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #038a5d;
+        }
+
+        section {
+            margin: 50px 0;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li {
+            margin-bottom: 10px;
+        }
+
+        .service-item,
+        .project-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-item:hover,
+        .project-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #04AA6D;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .firstsection {
+                flex-direction: column;
+            }
+
+            .firstsection > div {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .rightsection img {
+                width: 100%;
+                height: auto;
+            }
+
+            .leftsection h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 40px 10px;
+            }
+
+            .service-item, .project-item {
+                padding: 15px;
+            }
+            
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .left h2 {
+                font-size: 1.5rem;
+            }
+
+            .firstsection {
+                margin: 20px 0;
+                padding: 20px;
+            }
+
+            .leftsection p, .about p, .skills p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+        /* Initial styles for nav and nav-links */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #007f5f;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav-links initially on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #007f5f;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Display nav-links when active class is added */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <h2 style="color: white;">Amaan's Portfolio</h2>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div> <!-- Menu Icon for Mobile -->
+            <div class="right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section class="firstsection">
+            <div class="rightsection">
+                <img src="WhatsApp Image 2024-06-06 at 09.59.47_0e1d2364-Photoroom.png" alt="Amaan's photo">
+            </div>
+            <div class="leftsection">
+                <h1>Welcome to Amaan's Portfolio</h1>
+                <p>Hi, I'm Amaan. I am currently pursuing a diploma in Computer Engineering at Jamia Millia Islamia University in Delhi. I completed my 10th grade at St. Anne’s High School, achieving an 82% score. Driven by a passion for creativity and technology, I am deeply interested in web development and am constantly exploring ways to enhance my skills in building interactive and visually appealing digital experiences.
+
+Beyond coding, I have a keen interest in photography, acting, and cinematography. These creative pursuits allow me to tell stories and capture moments, blending aesthetics and emotion through visuals and performance. I am always on the lookout for new opportunities to learn, collaborate, and grow in both the technical and artistic dimensions of my journey.</p>
+                <a href="about.html" class="btn">Learn More About Me</a>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I am a versatile developer with a keen eye for detail and a passion for creating stunning digital experiences. I specialize in web development, graphic design, and cinematography. My journey started with a love for technology and has grown into a career dedicated to crafting beautiful and functional websites and applications.</p>
+        </section>
+
+        <section class="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>Web Development: HTML, CSS, JavaScript, React, Node.js</li>
+                <li>Graphic Design: Photoshop, Illustrator</li>
+                <li>Cinematography: Premiere Pro, After Effects</li>
+            </ul>
+        </section>
+
+        <section class="services">
+            <h2>My Services</h2>
+            <div class="service-item">
+                <h3>Web Development</h3>
+                <p>Building responsive and high-quality websites using the latest technologies.</p>
+            </div>
+            <div class="service-item">
+                <h3>Mobile App Development</h3>
+                <p>Creating user-friendly mobile applications for both Android and iOS platforms.</p>
+            </div>
+            <div class="service-item">
+                <h3>Consulting</h3>
+                <p>Providing expert advice and solutions to enhance your business operations.</p>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Recent Projects</h2>
+            <div class="project-item">
+                <h3>Project One</h3>
+                <p>Developed an AI Tic-Tac-Toe game using Python. The game includes an AI opponent with multiple difficulty levels, providing an interactive gaming experience.</p>
+            </div>
+            <div class="project-item">
+                <h3>Project Two</h3>
+                <p>Designed and implemented an AI chatbot capable of engaging in natural language conversations. The chatbot utilizes machine learning algorithms for understanding and generating responses.</p>
+            </div>
+            <div class="project-item">
+                <h3>Project Three</h3>
+                <p>Created visually appealing graphic designs for a bakery company, including logo design, packaging design, and marketing materials. The designs reflect the brand identity and enhance brand recognition.</p>
+            </div>
+            <a href="projects.html" class="btn">View More Projects</a>
+        </section>
+
+        <section class="contact">
+            <h2>Get In Touch</h2>
+            <p>If you have any questions or would like to work with me, feel free to reach out.</p>
+            <a href="contact.html" class="btn">Contact Me</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Amaan's Developer Portfolio</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <p>Copyright &#169; www.amaansportfolio.com | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+    
+</body>
+
+</html>

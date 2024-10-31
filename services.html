@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaan's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header {
+            background-color: #007f5f;
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .left h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        nav .right ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav .right ul li {
+            margin: 0;
+        }
+
+        nav .right ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav .right ul li a:hover {
+            color: #d4e157;
+            font-size: 1.04rem;
+        }
+
+        .secondsection {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .secondsection h1 {
+            font-size: 2.5rem;
+            color: #007f5f;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 300px;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .service h2 {
+            font-size: 1.5rem;
+            color: #007f5f;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .service p {
+            font-size: 1rem;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        footer {
+            background-color: #007f5f;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        footer .footer ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        footer .footer ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer ul li a:hover {
+            color: #d4e157;
+        }
+
+        footer .footer-right {
+            margin-top: 20px;
+            color: #dfe6e9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav .right ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="left">
+            <h2>Amaan's Portfolio</h2>
+        </div>
+        <nav>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secondsection">
+            <h1>Services</h1>
+            <div class="box">
+                <div class="service">
+                    <h2>Web Development</h2>
+                    <p>I specialize in creating responsive and user-friendly websites using modern web technologies. Whether you need a personal blog, a business website, or an e-commerce platform, I can bring your vision to life.</p>
+                </div>
+                <div class="service">
+                    <h2>Graphic Designing</h2>
+                    <p>I offer custom graphic design services for logos, branding, marketing materials, and more. From concept to execution, I ensure that your designs reflect your brand identity and resonate with your audience.</p>
+                </div>
+                <div class="service">
+                    <h2>Video Editing</h2>
+                    <p>Need professional video editing services? I can help you edit and enhance your footage to create engaging videos for various purposes, including marketing campaigns, social media content, tutorials, and more.</p>
+                </div>
+                <div class="service">
+                    <h2>Photo Editing</h2>
+                    <p>Transform your photos with high-quality photo editing services. Whether you need retouching, color correction, background removal, or creative effects, I can enhance your images to make them visually stunning.</p>
+                </div>
+                <div class="service">
+                    <h2>Social Media Management</h2>
+                    <p>Struggling to manage your social media accounts effectively? Let me handle it for you. From content creation to community engagement, I can help you build and maintain a strong presence on social media platforms.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <ul>
+                <li><a href="/">Privacy Policy</a></li>
+                <li><a href="/">Terms of Service</a></li>
+                <li><a href="/">Cookie Policy</a></li>
+            </ul>
+            <div class="footer-right">
+                &copy; 2024 Amaan's Portfolio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

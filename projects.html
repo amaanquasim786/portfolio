@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaan's Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff; /* White background */
+            color: #333; /* Dark text */
+            transition: all 0.3s ease-in-out;
+        }
+
+        header {
+            background-color: #007f5f; /* Primary Green Color */
+            padding: 20px;
+            color: white;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center; /* Center navigation links */
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff; /* White text */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d4e157; /* Lighter Green on hover */
+            font-size: 1.04rem;
+        }
+
+        .project-section {
+            padding: 50px 20px; /* Add padding for smaller screens */
+            text-align: center;
+        }
+
+        .project-section h1 {
+            font-size: 2.5rem;
+            color: #007f5f; /* Primary Green Color */
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .project-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .project {
+            background-color: #ffffff; /* White for the card background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 127, 95, 0.2); /* Light green shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: calc(33.33% - 40px);
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 25px rgba(0, 255, 239, 0.3); /* Lighter green glow */
+        }
+
+        .project h2 {
+            font-size: 1.5rem;
+            color: #007f5f; /* Primary Green Color */
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .project p {
+            font-size: 1rem;
+            color: #333; /* Dark text */
+            transition: color 0.3s ease;
+        }
+
+        footer {
+            background-color: #007f5f; /* Primary Green Color */
+            padding: 50px;
+            text-align: center;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        footer .footer ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        footer .footer ul li a {
+            text-decoration: none;
+            color: #ffffff; /* White text */
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer ul li a:hover {
+            color: #d4e157; /* Lighter Green on hover */
+        }
+
+        footer .footer-right {
+            margin-top: 20px;
+            color: #ffffff; /* White text */
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                width: calc(50% - 20px); /* Two projects per row on medium screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column; /* Stack navigation links */
+                gap: 10px;
+            }
+
+            .project {
+                width: 90%; /* Full width on small screens */
+            }
+
+            .project-section h1 {
+                font-size: 2rem; /* Smaller title on small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left"><h2 style="text-align: left;">Amaan's Portfolio</h2></div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-section">
+            <h1>Projects</h1>
+            <div class="project-box">
+                <div class="project">
+                    <h2>AI Tic-Tac-Toe Game</h2>
+                    <p>Developed an AI Tic-Tac-Toe game using Python. The game includes an AI opponent with multiple difficulty levels, providing an interactive gaming experience.</p>
+                </div>
+                <div class="project">
+                    <h2>AI Chatbot</h2>
+                    <p>Designed and implemented an AI chatbot capable of engaging in natural language conversations. The chatbot utilizes machine learning algorithms for understanding and generating responses.</p>
+                </div>
+                <div class="project">
+                    <h2>Graphic Designing for Bakery Company</h2>
+                    <p>Created visually appealing graphic designs for a bakery company, including logo design, packaging design, and marketing materials. The designs reflect the brand identity and enhance brand recognition.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <ul>
+                <li><a href="/">Privacy Policy</a></li>
+                <li><a href="/">Terms of Service</a></li>
+                <li><a href="/">Cookie Policy</a></li>
+            </ul>
+            <div class="footer-right">
+                &copy; 2024 Amaan's Portfolio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

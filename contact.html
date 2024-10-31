@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff; /* White background */
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-img {
+            background-image: url('contact_us_bg.jpg');
+            min-height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 16px;
+            background-color: #ffffff; /* White form background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
+            z-index: 1;
+            color: #333; /* Dark gray text for better contrast */
+            width: 90%; /* Make it responsive */
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type=text], input[type=email], textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: 1px solid #007f5f; /* Green border */
+            background: #ffffff; /* White background */
+            color: #333; /* Dark gray text */
+            resize: none;
+            transition: border-color 0.3s ease-in-out;
+            border-radius: 5px;
+        }
+
+        input[type=text]:focus, input[type=email]:focus, textarea:focus {
+            border-color: #007f5f; /* Green border on focus */
+            outline: none;
+        }
+
+        .btn {
+            background-color: #007f5f; /* Green button */
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #0AFFEF; /* Lighter green on hover */
+        }
+
+        .header, .footer {
+            background-color: #007f5f; /* Green header/footer */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+
+        .header {
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.6rem;
+        }
+
+        .header nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header nav ul li {
+            margin: 0 15px;
+        }
+
+        .header nav ul li a {
+            text-decoration: none;
+            color: #fcf5f5;
+            transition: color 0.3s ease;
+        }
+
+        .header nav ul li a:hover {
+            color: #ffffff;
+            font-size: 1.04rem;
+        }
+
+        .footer {
+            bottom: 0;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .footer ul li {
+            margin: 0 10px;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: #ccc;
+        }
+
+        .footer-right {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .message {
+            display: none;
+            color: #28a745;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.4rem;
+            }
+
+            .header nav ul li {
+                margin: 0 10px;
+            }
+
+            .container {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .header {
+                flex-direction: column;
+            }
+
+            .header h1 {
+                font-size: 1.2rem;
+            }
+
+            .footer {
+                font-size: 0.8rem;
+            }
+
+            .btn {
+                padding: 14px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-img"></div>
+
+<div class="header">
+    <h1>Contact Us</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+</div>
+
+<form id="contactForm" class="container">
+    <h2>Get in Touch</h2>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter your name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter your email" name="email" required>
+
+    <label for="message"><b>Message</b></label>
+    <textarea placeholder="Enter your message" name="message" rows="4" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+</form>
+
+<div class="message" id="successMessage">Thank you! Your message has been sent.</div>
+
+<footer>
+    <div class="footer">
+        <h3>Amaan's Developer Portfolio</h3>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+        <div class="footer-right">
+            &copy; 2024 Amaan. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Display success message
+        document.getElementById('successMessage').style.display = 'block';
+
+        // Optionally, send form data to the server using AJAX
+        // let formData = new FormData(this);
+        // fetch('/submit_form', {
+        //     method: 'POST',
+        //     body: formData
+        // }).then(response => response.text())
+        //   .then(data => {
+        //       console.log(data); // Handle server response
+        //   }).catch(error => {
+        //       console.error('Error:', error);
+        //   });
+    });
+</script>
+
+</body>
+</html>
